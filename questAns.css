@@ -1,0 +1,155 @@
+#masterRound {
+    align-self: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#masterRound .round {
+    display: flex;
+    background-color: yellow;
+    padding: 10px;
+    font-size: 3.0vw;
+    /*top/bottom padding: 15px, left/right padding: 30px */
+    color: red;
+    text-align: center;
+    vertical-align: center;
+    border: 3px solid blue;
+    border-width: 20%;
+    width: 65%;
+    margin: 6% auto;
+    animation: openFromCenter 3.5s ease forwards;
+}
+
+#masterRound .category {
+    display: inline-flex; /* Use inline-flex to allow the element to shrink to content */
+    background-color: yellow;
+    padding: 10px;
+    font-size: 3.0vw;
+    color: red;
+    text-align: center;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    border: 3px solid blue;
+    width: 40%;
+    /*max-width: 90%; /* Optionally set a max-width to prevent it from getting too wide */
+    margin: 40px auto; /* Center the element itself horizontally */
+    animation: openFromCenter 3.5s ease forwards;
+}
+
+#masterRound .question {
+    display: flex;
+    background-color: yellow;
+    font-size: 3.0vw;
+    padding: 15px 15px 30px 30px;
+    /*top/bottom padding: 15px, left/right padding: 30px */
+    color: red;
+    text-align: center;
+    vertical-align: center;
+    border: 3px solid blue;
+    border-width: 20%;
+    width: 70%;
+    margin: 2% auto;
+    animation: openFromCenter 3.5s ease forwards;
+}
+
+#masterRound .answer {
+    display: inline-flex; /* Use inline-flex to allow the element to shrink to content */
+    background-color: yellow;
+    padding: 10px;
+    font-size: 3.0vw;
+    color: red;
+    text-align: center;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    border: 3px solid blue;
+    width: 40%;
+    /*max-width: 90%; /* Optionally set a max-width to prevent it from getting too wide */
+    margin: 40px auto; /* Center the element itself horizontally */
+    animation: openFromCenter 3.5s ease forwards;
+}
+
+.timebox {
+    display: flex;
+    background-color: yellow;
+    font-size: 3.0vw;
+    padding: 15px 15px 30px 30px;
+    color: red;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    width: 20%;
+    box-sizing: border-box;
+    margin: 5% auto 0;
+    /* Adjust margin to move element down */
+    animation: openFromCenter 2.5s ease forwards; 
+}
+
+@keyframes increase {
+    60% {
+        height: 0px;
+        width: 0px;
+    }
+
+    /*load to left*/
+    100% {
+        height: 0px;
+        width: 0px;
+    }
+}
+
+.roundQuestion {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    font-size: 3.0vw;
+    color: red;
+    text-align: center;
+    vertical-align: center;
+    border: 3px solid blue;
+    left: 435px;
+    height: 34px;
+    width: 100px;
+    margin: 25% auto;
+    animation: openFromCenter 3.5s ease forwards;
+}
+
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/redCross.jpg');
+    background-size: cover;
+    opacity: 0;
+    z-index: 1;
+}
+ */
+/* .image {
+    position: relative;
+    margin: 2% auto;
+    opacity: 1;
+    z-index: 2; /* Ensure image is above the overlay */
+/* }  */
+
+
+
+@keyframes openFromCenter {
+    0% {
+        transform: scale(0.1);
+        /* Start with small scale */
+        opacity: 0;
+        /* Start with opacity 0 */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Scale to normal size */
+        opacity: 1;
+        /* Fully visible */
+    }
+}

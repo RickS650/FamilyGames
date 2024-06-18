@@ -1,0 +1,45 @@
+
+.multiRound {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    column-count: 2;
+    align-items: flex-start; /* Align items at the top*/
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 190px; 
+} 
+
+.box {
+    width: 270px; 
+    height: auto; 
+    background-color: yellow;
+    padding: 10px;
+    color: red;
+    border: 3px solid blue;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 3.5vw;
+    margin-top: 40px;
+}
+
+.spare {
+    display: flex;
+    top: 8%;
+    margin: auto;
+    width: 270px; 
+    height: auto; 
+    background-color: yellow;
+    padding: 10px;
+    color: red;
+    border: 3px solid blue;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vw;
+}

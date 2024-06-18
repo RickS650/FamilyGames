@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" type="text/css" href="questAns.css">
+    <link rel="stylesheet" type="text/css" href="writersDayOff.css">
+    <link rel="stylesheet" type="text/css" href="doubleTrouble.css">
+    <link rel="stylesheet" type="text/css" href="answerSmash.css">
+    <link rel="stylesheet" type="text/css" href="startUp.css">
+    <link rel="stylesheet" type="text/css" href="rhombus.css">
+    <link rel="stylesheet" type="text/css" href="ztoa.css">
+    <link rel="stylesheet" type="text/css" href="winwhensinging.css">
+    <link rel="stylesheet" type="text/css" href="allOver.css">
+    <!-- popup.css is at the end of this form -->
+
+    <script type="module" src="index.js" defer></script>
+    <script type="module" src="data.js"></script>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/read-excel-file@5.7.1/+esm"></script>
+
+    <div class="timebox" id="timebox" style="display: none">00:00</div>
+    <div class="players" id="players" style="display: none">
+        <div class="player1" id="player1" style="display: none"></div>
+        <div class="player2" id="player2" style="display: none"></div>
+        <div class="player3" id="player3" style="display: none"></div>
+        <div class="player4" id="player4" style="display: none"></div>
+        <div class="player5" id="player5" style="display: none"></div>
+    </div>
+
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <title>Family Christmas Games</title>
+
+</head>
+
+<body style="background-color: red;">
+
+    <img class="hollyLeft" id="hollyLeft" src="images/hollyLeft.png" style="display: block"></img>
+
+    <div class="header" id="header"
+        style="display: block; font-family: Lobster, Calibri, Verdana, sans-serif; font-size: 6.0vw;">
+        Family Games - Christmas <span id="currentYear"></span></div>
+
+    <img class="hollyRight" id="hollyRight" src="images/hollyRight.png" style="display: block"></img>
+
+    <!-- <div id="page1" style="display: block" ;></div> -->
+
+    <div class="itsAllOver" id="itsAllOver" style="display: none; height: 100%; width: 100%;"></div>
+    <!-- <div id="page2" style="display: none;"> -->
+    <!-- <button onclick="goToPage1()">Go to Page 1</button> -->
+    <!-- </div> -->
+
+    <!-- <div style="float: right;"> -->
+    <!-- <button type="button" onclick="goToPage2()" id="btnNext" class="btnClass">Next</button> -->
+    <!-- </div> -->
+
+    <div class="masterRound" id="masterRound" style="display:none;">
+        <div class="round" id="round" style="display: none;">999</div>
+        <div class="category" id="category" style="display:none">xxx</div>
+        <div class="question" id="question" style="display: none;">yyy</div>
+        <div class="answer" id="answer" style="display: none;">zzz</div>
+    </div>
+
+    <div class="multiRound" id="multiRound" style="display: none;">
+
+        <div class="column" id="column1">
+            <div class="box" id="box1">a</div>
+            <div class="box" id="box2">b</div>
+            <div class="box" id="box3">c</div>
+            <div class="box" id="box4">d</div>
+        </div>
+
+        <div class="column" id="column2">
+            <div class="box" id="box5">e</div>
+            <div class="box" id="box6">f</div>
+            <div class="box" id="box7">g</div>
+            <div class="box" id="box8">h</div>
+
+        </div>
+    </div>
+
+    <div class="spare" id="spare" style="display: none; text-align: center;"></div>
+    <div class="letterBox" id="letterBox" style="display: none"></div>
+    <div class="smashIt" id="smashIt" style="display: none;"></div>
+
+    <!-- <div class="category" id="category" style="display:none"> -->
+        <!-- <div class="overlay"></div> -->
+        <!-- <img src="images/redCross.png" alt="redCross" id="image" class="image" style="display:none"> -->
+    <!-- </div> -->
+
+    <div class="ztoabanner" id="ztoabanner" style="display:none">
+        <span>Z</span><span>Y</span><span>X</span><span>W</span><span>V</span><span>U</span><span>T</span><span>S</span><span>R</span><span>Q</span><span>P</span><span>0</span><span>N</span><span>M</span><span>L</span><span>K</span><span>J</span><span>I</span><span>H</span><span>G</span><span>F</span><span>E</span><span>D</span><span>C</span><span>B</span><span>A</span>
+    </div>
+
+    <div class="doubleTrouble" id="doubleTrouble" style="display:none; text-align: center;">
+        <div class="column" id="colDouble">
+            <div class="leftBox" id="leftBox" style="display:none;"></div>
+            <div class="rightBox" id="rightBox" style="display:none;"></div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="scores" id="namesScore" style="display:none;">
+        <div class="float-container">
+            <div class="float-child">
+                <div id="rhombus1" class="rhombus"></div>
+            </div>
+            <div class="float-child">
+                <div id="rhombus2" class="rhombus"></div>
+            </div>
+            <div class="float-child">
+                <div id="rhombus3" class="rhombus"></div>
+            </div>
+            <div class="float-child">
+                <div id="rhombus4" class="rhombus"></div>
+            </div>
+            <div class="float-child">
+                <div id="rhombus5" class="rhombus"></div>
+            </div>
+        </div>
+
+        <div class="playerName-row">
+            <div id="playerName1" class="playerName"><span>a</span></div>
+            <div id="playerName2" class="playerName"><span>b</span></div>
+            <div id="playerName3" class="playerName"><span>c</span></div>
+            <div id="playerName4" class="playerName"><span>d</span></div>
+            <div id="playerName5" class="playerName"><span>e</span></div>
+        </div>
+
+        <div class="square-row">
+            <div id="square1" class="square">1</div>
+            <div id="square2" class="square">2</div>
+            <div id="square3" class="square">3</div>
+            <div id="square4" class="square">4</div>
+            <div id="square5" class="square">5</div>
+        </div>
+    </div>
+
+    <!-- <div class="multiCell" id="multiCell" style="display: none;"> -->
+    <div class="cellList" id="cellList" style="display: none; ">
+        <div class="split0" id="split0" style="display: none"></div>
+        <!-- alphaBox0 to alphaBoxn created in data.js -->
+        <div class="split1" id="split1" style="display: none"></div>
+        <!-- alphaBox0 to alphaBoxn created in data.js -->
+        <div class="split2" id="split2" style="display: none"></div>
+        <!-- alphaBox0 to alphaBoxn created in data.js -->
+    </div>
+    <!-- </div> -->
+
+    <div class="timebox" id="timebox" style="display: none">00:00</div>
+    <div class="players" id="players" style="display: none">
+        <div class="player1" id="player1" style="display: none"></div>
+        <div class="player2" id="player2" style="display: none"></div>
+        <div class="player3" id="player3" style="display: none"></div>
+        <div class="player4" id="player4" style="display: none"></div>
+        <div class="player5" id="player5" style="display: none"></div>
+    </div>
+
+    <script>
+        fetch('popup.html')
+            .then(response => response.text())
+            .then(html => {
+                const div = document.createElement('div');
+                div.innerHTML = html;
+                document.body.appendChild(div);
+
+                const script = document.createElement('script');
+                script.type = 'module';
+                script.src = 'popup.js';
+                document.body.appendChild(script);
+            });
+    </script>
+        <link rel="stylesheet" type="text/css" href="popup.css">
+</body>
+
+</html>

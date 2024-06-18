@@ -1,0 +1,16 @@
+.header {
+    color: greenyellow;
+    text-align: center;
+    vertical-align: center;
+    margin-top: 1%;
+}
+
+.hollyLeft {
+    margin-left: 10%;
+    margin-top: 12%;
+}
+
+.hollyRight {
+    margin-left: 83%;
+    margin-top: 1%
+}

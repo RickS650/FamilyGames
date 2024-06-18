@@ -1,0 +1,166 @@
+
+
+.float-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 85px;
+    position: relative;
+}
+
+.float-child {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rhombus {
+    width: 150px;
+    height: 150px;
+    /* left: 25px; */
+    background: yellow;
+    transform: rotate(45deg) skew(10deg, 10deg);
+    position: relative;
+    border-color: blue;
+    z-index: 1;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border: 2px solid blue;
+}
+
+.rhombus span {
+    font-size: 1.8vw;
+    font-weight: bold;
+    position: absolute;
+    /*     top: 50%;
+    left: 50%; */
+    bottom: -20px;
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%);
+    color: red;
+}
+
+.rhombus img {
+    margin-top: 23px;
+    margin-left: 23px;
+    place-items: center;
+    width: 70%;
+    height: 70%;
+    transform: rotate(-45deg);
+}
+
+.rhombi-row {
+    display: flex;
+    justify-content: center;
+    /* Center elements horizontally */
+    margin-top: 20px;
+    /* Adjust as necessary */
+}
+
+.playerName-row,
+.square-row {
+    display: flex;
+    font-size: 1.8vw;
+    font-weight: bold;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Center elements horizontally */
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+/* players oblong  container */
+.playerName-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    /* Adjust margin as necessary */
+    color: red;
+}
+
+.playerName {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    vertical-align: text-top;
+    width: 120px;
+    height: 70px;
+    background: yellow;
+    text-align: center;
+    line-height: 70px;
+    margin: 20px 20px;
+    border: 2px solid blue;
+    border-radius: 10%;
+}
+
+/* Player Name Positions for Each Rhombus */
+#playerName1 {
+    left: calc(20% * 0.5);
+    /* Position based on width of rhombus and player name */
+}
+
+#playerName2 {
+    left: calc(20% * 1.5);
+    /* Position based on width of rhombus and player name */
+}
+
+#playerName3 {
+    left: calc(20% * 2.5);
+    /* Position based on width of rhombus and player name */
+}
+
+#playerName4 {
+    left: calc(20% * 3.5);
+    /* Position based on width of rhombus and player name */
+}
+
+#playerName5 {
+    left: calc(20% * 4.5);
+    /* Position based on width of rhombus and player name */
+}
+
+/* score boxes container */
+.square-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* Center score boxes horizontally */
+    margin-top: 10px;
+    /* Adjust as necessary */
+}
+
+/* show the scores */
+.square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    background: yellow;
+    text-align: center;
+    line-height: 60px;
+    z-index: 3;
+    margin-top: 10px;
+    margin-left: 48px;
+    margin-right: 48px;
+    border: 2px solid blue;
+    border-radius: 10%;
+}
+
+.float-square {
+    text-align: center;
+    vertical-align: center;
+    display: flex;
+}
+
+.btnClass {
+    height: 20px;
+    min-width: 30px;
+    color: blue;
+    font-size: .75vw;
+}

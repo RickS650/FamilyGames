@@ -1,0 +1,30 @@
+.answerIt {
+    flex: 1; /* Take up equal space */
+    background-color: yellow;
+    padding: 10px;
+    color: red;
+    border: 3px solid blue;
+    font-size: 3.5vw;
+    /* margin: 0 10%; */
+    align-self: center; /* Center vertically */
+}
+
+.smashIt {
+    display: flex;
+    background-color: yellow;
+    font-size: 3.5vw;
+    padding: 15px 15px 30px 30px; 
+    color: red;
+    text-align: center;
+    vertical-align: center;
+    border: 3px solid blue;
+    border-width: 20%;
+    height: 200px;
+    width: 200px;
+    margin: 1% auto;
+    transition: height 0.5s ease;
+}
+
+.collapsed {
+    height: 0; /* Set height to 0 when collapsed */
+}
